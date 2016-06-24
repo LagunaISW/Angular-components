@@ -4,7 +4,7 @@
     var module = angular.module("psMovies");
 
     function fetchMovies($http) {
-            return $http.get("/movies.json")
+            return $http.get("/app/movies.json")
                 .then(function(response) {
                     return response.data;
                 });
