@@ -4,7 +4,15 @@
     var module = angular.module("psMovies");
 
     module.component("movieList",{
-        template:"Hello madaka"
+        templateUrl:"/ps-movies/movie-list.component.html",
+        controllerAs: "model",
+        controller: function () {
+            var model = this;
+            model.message = "Hello from the controller";
+            model.changeMessage = function () {
+                model.message = "New message";
+            };
+        }
     });
 
 }());
