@@ -1,0 +1,7 @@
+accordion .ng-enter{
+    animation: fadeIn 0.2s
+}
+
+accordion .ng-leave{
+    animation: fadeOut 0.2s
+}
