@@ -9,7 +9,8 @@
         <tr ng-repeat="movie in model.movies">
             <td>{{movie.title}}</td>
             <td>
-                <movie-rating value="movie.rating" max="5"></movie-rating>
+                <movie-rating value="movie.rating" max="5"
+                                set-rating="model.setRating(movie, value)"></movie-rating>
             </td>
             <td>{{movie.length}}</td>
             <td>

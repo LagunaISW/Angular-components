@@ -25,6 +25,12 @@
             model.$router.navigate(["Details", { id: id }, "Overview"]);
         }
 
+        model.setRating = function (movie, newRating) {
+            if (newRating < 6 && newRating > 0) {
+                movie.rating = newRating;
+             }
+        }
+
         model.upRating = function (movie) {
             if (movie.rating < 5) { 
                 movie.rating += 1;
