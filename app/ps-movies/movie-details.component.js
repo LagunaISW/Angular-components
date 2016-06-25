@@ -6,12 +6,11 @@
     module.component("movieDetails", {
         templateUrl: "ps-movies/movie-details.component.html",
         controllerAs: "model",
-        //Determina si el usuario puede acceder al componente
-        //$canActivate: function ($timeout) {
-        //    return $timeout(function () { 
-        //        return true;
-        //    }, 2000);
-        //},
+        $routeConfig: [
+            { path: "/overview", component: "movieOverview", name: "Overview" },
+            { path: "/cast", component: "movieCast", name: "Cast" },
+            { path: "/director", component: "movieDirector", name: "Director" }
+        ],
         controller: function () { 
             var model = this;
 
@@ -19,6 +18,16 @@
                 model.id = next.params.id;
             };
         }
+    });
+
+    module.component("movieOverview", {
+        template: "Este es el overview"
+    });
+    module.component("movieCast", {
+        template: "Este es el cast"
+    });
+    module.component("movieDirector", {
+        template: "Este es el director"
     });
 
 }());
